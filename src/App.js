@@ -4,7 +4,7 @@ import { Home } from './pages/Home/index';
 import {Route, Routes} from 'react-router-dom';
 import NavbarApp from './components/Navbar/index';
 import { Footer } from "./components/Footer";
-import  Characters  from "./pages/Characters";
+import  Characters  from "./pages/Characters/";
 import  Planets  from "./pages/Planets";
 
 function App() {

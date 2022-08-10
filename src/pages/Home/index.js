@@ -4,7 +4,7 @@ import CartasApp from '../../components/Cards';
 
 export const Home = () => {
     return (
-      <div>
+      <div >
         <CarruselApp />
         <br />
         <Texto />

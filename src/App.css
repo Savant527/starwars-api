@@ -25,6 +25,10 @@
    box-shadow: #30353a;
    border-radius: 12px;
  }
+ /* .titulo {
+  -webkit-text-stroke: 2px black;
+  color: transparent;
+ } */
  .logo {
    width: 100px;
  }
