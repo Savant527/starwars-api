@@ -2,21 +2,46 @@ import { useState }from 'react'
 
 export const usePerson = () => {
     const [dataPeople, setDataPeople] = useState([])
-   const getAllPeople = () => {
-    var requestOptions = {
+    const [Contador, setContador] = useState (1);
+
+    const disminuir = () => {
+      if (Contador <= 1) {
+        setContador(1);
+      } else {
+        setContador(Contador - 1);
+      }
+    };
+    const aumentar = () => {
+      if (Contador >= 9) {
+
+        
+      } else {
+        setContador(Contador + 1);
+      }
+    };
+
+   const getAllPeople = async(numberPage) => {
+   try { var requestOptions = {
         method: 'GET',
         redirect: 'follow'
       };
       
-      fetch("https://swapi.dev/api/people", requestOptions)
+      await fetch(`https://swapi.dev/api/people/?page=${numberPage}`, requestOptions)
         .then(response => response.json())
         .then(result => setDataPeople(result.results))
         .catch(error => console.log('error', error));
-
-
-   }
+    } catch (error) {
+      console.log(error);
+    }
+        
+   };
   return {
     getAllPeople,
-    dataPeople
+    dataPeople,
+    disminuir,
+    aumentar,
+    Contador
+
   };
+
 };
