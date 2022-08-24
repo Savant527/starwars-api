@@ -6,6 +6,7 @@ import NavbarApp from './components/Navbar/index';
 import { Footer } from "./components/Footer";
 import  Characters  from "./pages/Characters/";
 import  Planets  from "./pages/Planets";
+import Details from "./pages/Characters/details";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/characters" element={<Characters />} />
+        <Route path="/details/:name" element={<Details />} />
         <Route path="/planets" element={<Planets />} />
       </Routes>
       <Footer/>

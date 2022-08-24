@@ -19,6 +19,9 @@ export const usePerson = () => {
         setContador(Contador + 1);
       }
     };
+    const back = () => {
+      window.history.go(-1)
+    }
 
    const getAllPeople = async(numberPage) => {
    try { var requestOptions = {
@@ -35,12 +38,28 @@ export const usePerson = () => {
     }
         
    };
+   const homeworld = async() => {
+    try { var requestOptions = {
+      method: 'GET',
+      redirect: 'follow'
+    };
+    
+    await fetch("https://swapi.dev/api/planets/8/", requestOptions)
+      .then(response => response.json())
+      .then(result => setDataPeople(result.results))
+      .catch(error => console.log('error', error));
+  } catch (error) {
+    console.log(error);
+  }
+   };
   return {
     getAllPeople,
     dataPeople,
     disminuir,
     aumentar,
-    Contador
+    Contador, 
+    back, 
+    homeworld
 
   };
 

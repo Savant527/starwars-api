@@ -6,7 +6,7 @@ import Imagen7 from "../../assets/img/7.jpg";
 import { BsArrowLeft, BsArrowRight } from 'react-icons/bs';
 
 const CartasApp = () => {
-  const { getAllPeople, dataPeople, aumentar, disminuir, Contador } = usePerson();
+  const { getAllPeople, dataPeople, aumentar, disminuir, Contador} = usePerson();
 
   useEffect(() => {
     getAllPeople(Contador);
@@ -23,6 +23,7 @@ const CartasApp = () => {
       {dataPeople.map((people) => (
         <CartaApp
           key={people.name}
+          keyName={people.name}
           nombre={people.name}
           genero={people.gender}
           nacimiento={people.birth_year}
@@ -33,6 +34,7 @@ const CartasApp = () => {
           editado={people.edited}
           altura={people.height}
           peso={people.mass}
+          name={people.name}
           imagen={Imagen7}
         />
       ))}
