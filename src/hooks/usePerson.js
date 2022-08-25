@@ -38,28 +38,18 @@ export const usePerson = () => {
     }
         
    };
-   const homeworld = async() => {
-    try { var requestOptions = {
-      method: 'GET',
-      redirect: 'follow'
-    };
-    
-    await fetch("https://swapi.dev/api/planets/8/", requestOptions)
-      .then(response => response.json())
-      .then(result => setDataPeople(result.results))
-      .catch(error => console.log('error', error));
-  } catch (error) {
-    console.log(error);
-  }
-   };
+  //  const homeworld = [
+  //   dataPeople?.homeworld,
+  // ]
+
   return {
     getAllPeople,
     dataPeople,
     disminuir,
     aumentar,
     Contador, 
-    back, 
-    homeworld
+    back
+
 
   };
 

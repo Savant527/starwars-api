@@ -21,7 +21,7 @@ function Detail  () {
   }, [dataPeople]);
   
   const filtrar = dataPeople.filter((filtro) => filtro.name === nombre);
-  
+   
 
   return (
     <div>
@@ -55,7 +55,7 @@ function Detail  () {
       <Card style={{ width: '12rem' }} className='m-3'>
       <Card.Header className='bg-dark text-light'><strong>Homeworld</strong></Card.Header>
       <ListGroup variant="flush" className='texto-carta'>
-        <ListGroup.Item>{person.name}</ListGroup.Item>
+        <ListGroup.Item>{person.homeworld}</ListGroup.Item>
       </ListGroup>
     </Card>
       <Card style={{ width: '12rem' }} className='m-3'>
@@ -68,6 +68,12 @@ function Detail  () {
       <Card.Header className='bg-dark text-light'><strong>Species</strong></Card.Header>
       <ListGroup variant="flush" className='texto-carta'>
         <ListGroup.Item>{person.species}</ListGroup.Item>
+      </ListGroup>
+    </Card>
+      <Card style={{ width: '12rem' }} className='m-3'>
+      <Card.Header className='bg-dark text-light'><strong>Starships</strong></Card.Header>
+      <ListGroup variant="flush" className='texto-carta'>
+        <ListGroup.Item>{person.starships}</ListGroup.Item>
       </ListGroup>
     </Card>
       </div>
