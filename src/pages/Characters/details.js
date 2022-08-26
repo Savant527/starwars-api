@@ -28,9 +28,9 @@ function Detail  () {
     <Container>
       <Button className='m-3' variant="dark" onClick={back}>Back</Button>
       <h1 className='text-center'>{params.name}</h1>
-      <div className="container m-3 d-flex justify-content-center align-items-center">
+      <div className="container m-3 d-flex justify-content-center align-items-center flex-wrap">
       <div className="imagen">
-        <img src={Imagen7} width="450" ></img>
+        <img src={Imagen7} className="img-fluid" width="450" ></img>
       </div>
 
       {filtrar.map((person) => (

@@ -29,7 +29,7 @@ export const Footer = () => {
         </div> 
       </div>
     </div>
-      <div className=" row m-0 p-3 footer-abajo text-center text-white">
+      <div className="row m-0 p-3 footer-abajo text-center text-white text-wrap">
         <small> ©2022 <strong>Sebastian Navas</strong> - Todos los derechos reservados</small>
       </div>
     </div>
