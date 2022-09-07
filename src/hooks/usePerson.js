@@ -38,9 +38,6 @@ export const usePerson = () => {
     }
         
    };
-  //  const homeworld = [
-  //   dataPeople?.homeworld,
-  // ]
 
   return {
     getAllPeople,
