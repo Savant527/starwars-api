@@ -31,7 +31,8 @@ function Detail() {
   const mapeo3 = filtrar.map((pelicula) => pelicula.films)
   var films = mapeo3[0];
   detailsFilms([films]);
-  console.log(films);
+  // console.log(films);
+  
 
   return (
     <div>
@@ -88,38 +89,7 @@ function Detail() {
             </div>
           ))}
         </div>
-        {/* 
-      {  
-        filtrar.map((person) => (
-      <div key={person.name} className="container d-flex justify-content-center flex-wrap text-center">
-      <Card style={{ width: '12rem' }} className='m-3'>
-      <Card.Header className='bg-dark text-light'><strong>Homeworld</strong></Card.Header>
-      <ListGroup variant="flush" className='texto-carta'>
-        <ListGroup.Item>{person.homeworld}</ListGroup.Item>
-      </ListGroup>
-    </Card>
-      <Card style={{ width: '12rem' }} className='m-3'>
-      <Card.Header className='bg-dark text-light'><strong>Films</strong></Card.Header>
-      <ListGroup variant="flush" className='texto-carta'>
-        <ListGroup.Item>{person.films}</ListGroup.Item>
-      </ListGroup>
-    </Card>
-      <Card style={{ width: '12rem' }} className='m-3'>
-      <Card.Header className='bg-dark text-light'><strong>Species</strong></Card.Header>
-      <ListGroup variant="flush" className='texto-carta'>
-        <ListGroup.Item>{person.species}</ListGroup.Item>
-      </ListGroup>
-    </Card>
-      <Card style={{ width: '12rem' }} className='m-3'>
-      <Card.Header className='bg-dark text-light'><strong>Starships</strong></Card.Header>
-      <ListGroup variant="flush" className='texto-carta'>
-        <ListGroup.Item>{person.starships}</ListGroup.Item>
-      </ListGroup>
-    </Card>
-      </div>
-    ))} */}
-
-     <div className="container d-flex justify-content-center flex-wrap text-center">
+        <div className="container d-flex justify-content-center flex-wrap text-center">
      {dataPlanetPerson?.length > 0 && (
      <Card style={{ width: '12rem' }} className='m-3'>
       <Card.Header className='bg-dark text-light text-center'><strong>Homeworld</strong></Card.Header>
@@ -157,6 +127,31 @@ function Detail() {
     </Card>
     )}
      </div>
+      {  
+        filtrar.map((person) => (
+      <div key={person.name} className="container d-flex justify-content-center flex-wrap text-center">
+      <Card style={{ width: '12rem' }} className='m-3'>
+      <Card.Header className='bg-dark text-light'><strong>Films</strong></Card.Header>
+      <ListGroup variant="flush" className='texto-carta'>
+        <ListGroup.Item>{person.films}</ListGroup.Item>
+      </ListGroup>
+    </Card>
+      <Card style={{ width: '12rem' }} className='m-3'>
+      <Card.Header className='bg-dark text-light'><strong>Species</strong></Card.Header>
+      <ListGroup variant="flush" className='texto-carta'>
+        <ListGroup.Item>{person.species}</ListGroup.Item>
+      </ListGroup>
+    </Card>
+      <Card style={{ width: '12rem' }} className='m-3'>
+      <Card.Header className='bg-dark text-light'><strong>Starships</strong></Card.Header>
+      <ListGroup variant="flush" className='texto-carta'>
+        <ListGroup.Item>{person.starships}</ListGroup.Item>
+      </ListGroup>
+    </Card>
+      </div>
+    ))} 
+
+    
       </Container>
     </div>
   );
